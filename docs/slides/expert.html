@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Explore DJANGO - Master Relic Hunter</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/moon.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="reveal" _="
+init for withTooltip in <*[data-tooltip]/> call createTooltip(withTooltip, @data-tooltip of withTooltip) end
+on typeComplete call Reveal.layout()
+">
+    <div class="slides"
+         _="on slideShow for typed in <*[data-typed]/> in target call type(typed, @data-typed of typed) end">
+        <section>
+            <h4>Welcome to the Isle of</h4>
+            <h2>Avalore's Lost Sanctum</h2>
+            <h4><small>adventurous</small> Master Relic Hunter</h4>
+        </section>
+        <section>
+            <h4>You will be accompanied by the swift and graceful</h4>
+            <h2>Zephyr the Leopard 🐆</h2>
+            <small>Do not hold back from seeking his assistance, as he is readily available to offer guidance throughout
+                the way</small>
+        </section>
+        <section>
+            <small data-tooltip="Du bist auf der Insel 'Avalore's Lost Sanctum' angekommen. Ein mächtiger Tempel erhebt sich vor dir - das steinerne Tor ziert eine Schlange. Ist es eine Python? Du bist dir nicht sicher und trittst näher. Ein tiefes Beben, wie aus den Tiefen der Erde selbst erhebt sich. Staub rieselt vom Tor. Ja es ist ganz sicher eine Python. Ein Ruck - das Tor beginnt sich schleifend zu öffnen. Schwerfällig und doch so, als würde es noch zehntausend Jahre überstehen. Du trittst in die Dunkelheit des Tempels.">
+                As you step foot on the mystical island of Avalore's Lost Sanctum, a powerful temple looms before you.
+                Adorning its stone gate is a striking serpent, captivating your attention. Is it a python? Uncertainty
+                fills your mind as you cautiously approach. Suddenly, a deep rumbling, as if echoing from the depths of
+                the earth, reverberates through the air. Dust cascades from the gate. Yes, it is undoubtedly a python.
+                With a jolt, the gate begins to scrape open, its movement laborious yet seemingly destined to endure for
+                another ten thousand years. You step into the darkness of the temple, your senses heightened, ready to
+                unravel the secrets that lie within.
+            </small>
+        </section>
+        <section>
+            <small data-tooltip="Langsam gewöhnen sich deine Augen an das schwummrige Licht. Du blickst auf den Weg vor dir - ein kurzer Gang, der an einer Wand mit zwei Türen endet. Auf der linken Tür ist eine Symbol eingraviert. Ein Auge? Auf der rechten Türe erkennst du nun auch ein Zeichen. Scheint ein Schlüssel zu sein. Während sich deine Augen weiter an die Dunkelheit gewöhnen kannst du nun auch eine Inschrift über den Türen erkennen. 'Das Auge erkennt das Offensichtliche - der Schlüssel führt zum Verborgenen. Wähle weise, Wanderer' Du blickst dich um. Es gibt keinen anderen Weg. Du musst eine der Türen wählen.">
+                As your eyes slowly adjust to the dim light, you gaze upon the path ahead—a short corridor that
+                culminates in a wall adorned with two doors. On the left door, an engraved symbol catches your
+                attention. An eye? Upon closer inspection of the right door, you discern another sign—a key. As your
+                eyes adapt further to the darkness, you can now discern an inscription above the doors. It reads, 'The
+                eye perceives the obvious — the key leads to the concealed. Choose wisely, wanderer.' You survey your
+                surroundings, realizing there is no other way forward. You must select one of the doors, for there is no
+                turning back.
+            </small>
+        </section>
+        <section>
+            <h2>Choose wisely, wanderer</h2>
+            <div class="flex gap-4 w-full justify-center">
+                <a href="#/seeing_eye">
+                    <div class="h-64 w-40 flex items-center justify-center r-frame"
+                         data-tooltip="Frontend Entwicklung mit Django und HTMX">
+                        <h2>👁️</h2>
+                    </div>
+                </a>
+                <a href="#/revealing_key">
+                    <div class="h-64 w-40 flex items-center justify-center r-frame"
+                         data-tooltip="Backend Entwicklung mit Django-REST-Framework">
+                        <h2>🔑</h2>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section id="seeing_eye">
+            <section>
+                <h2 class="r-fit-text">Path of the Seeing Eye</h2>
+                <h2 class="r-fit-text">Frontend Development with Django and HTMX</h2>
+            </section>
+            <section>
+                <small data-tooltip="Gleißendes Licht schlägt dir entgegen. Blinzelnd versuchst du zu erkennen was vor dir liegt. Es scheint, dass du dich in einem Innenhof befindest - der Boden ist säuberlich mit verzierten Steinen gepflastert. In der Mitte befindet sich etwas, das aussieht wie ein Podest oder Altar. Du trittst näher heran.">
+                    As brilliant light assaults your vision, you instinctively blink, attempting to discern the
+                    mysterious sight before you. Gradually, as your eyes adjust to the radiance, you find yourself
+                    standing in a courtyard. The ground beneath your feet is meticulously paved with ornate stones,
+                    exuding an air of ancient craftsmanship. At the center of the courtyard stands an object resembling
+                    a pedestal or altar. Curiosity propels you forward, drawing you nearer to investigate its enigmatic
+                    presence.
+                </small>
+            </section>
+            <section>
+                <small data-tooltip="In die steinerne Platte des Altars ist eine Inschrift kunstvoll eingearbeitet: 'Gestrandet in Komplexität, finde nun die erstaunliche Macht von HTMX geleitet durch das Rätsel, dir nun gestellt.' Gefolgt von weiteren mit Ornamenten verzierten Lettern...">
+                    Etched intricately into the stone slab of the altar, a masterfully crafted inscription reveals
+                    itself: "Stranded amidst complexity, now discover the astonishing power of HTMX guided by the enigma
+                    presented before you." The message continues, adorned with ornate letters that seem to carry an air
+                    of mystique and ancient wisdom...
+                </small>
+            </section>
+            <section>
+                <h3>👁️ Trial of the Seeing Eye 👁️</h3>
+                <h4>Part 1</h4>
+                <small data-tooltip="In deinem Projekt befindet sich bereits eine App names 'pirateDatabase'. Binde diese App ein - du brauchst sie für diese Aufgabe.">
+                    Ah, the mystical app known as 'pirateDatabase' already resides within your project. Fear not, for I
+                    shall weave its essence into our quest. I shall bind this app, allowing its powers to be harnessed
+                    for the forthcoming task.
+                </small>
+                <small class="mt-4"
+                       data-tooltip="'pirates_list.html' enthält ein Template, das links eine Liste aller Piraten anzeigt. Rechts davon sollen beim Anklicken eines Eintrages dessen Details angezeigt werden. Hierfür gibt es ebenfalls schon ein Template 'pirate_detail.html'.">
+                    Ah, the fabled 'pirates_list.html' template, a parchment that unveils a majestic list of all the
+                    pirates. To the left, it proudly displays the names of these notorious seafarers. Yet, there is more
+                    to discover. When an entry is clicked upon, the right side of the template shall reveal itself,
+                    presenting the intricate details of the chosen pirate. Fear not, for the counterpart template,
+                    'pirate_detail.html,' has already been prepared, awaiting the opportunity to showcase the hidden
+                    depths of a selected pirate's tale.
+                </small>
+                <small class="mt-4" data-tooltip="Löse diese Aufgabe, ohne komplette Page-Refreshes mithilfe von HTMX.">
+                    Embark upon this task, traversing the path of ingenuity, for you must conquer it without relying on
+                    complete page refreshes. Fear not, for <a target="_blank" href="https://htmx.org/">HTMX</a> shall be
+                    your guiding light, empowering you to accomplish this feat with grace and efficiency.
+                </small>
+            </section>
+            <section>
+                <h3>Stuck? Zephyr will guide you the way 🐆</h3>
+                <ul>
+                    <li>
+                        <span role="button" _="on click toggle .hidden on next <p/>">Show me Hint 1</span>
+                        <p class="hidden">
+                            <small>
+                                Zur Anzeige der Piraten-Liste kannst du Django's "ListView" verwenden.
+                            </small>
+                        </p>
+                    </li>
+                    <li>
+                        <span role="button" _="on click toggle .hidden on next <p/>">Show me Hint 2</span>
+                        <p class="hidden">
+                            <small>
+                                Als Antwort auf einen HTMX-Request kannst du ein Template rendern, das nur kleine Teile
+                                der Seite enthält und diese ersetzt. Zum Beispiel 'pirate_detail.html'.
+                            </small>
+                        </p>
+                    </li>
+                    <li>
+                        <span role="button" _="on click toggle .hidden on next <p/>">Show me Hint 3</span>
+                        <p class="hidden">
+                            <small>
+                                Beim Klick auf einen Eintrag in der Tabelle kannst du einen HTMX-Request auslösen, der
+                                an einen ganz einfachen "DetailView" geht und dann auf der Seite den Inhalt des
+                                "#pirate-detail-content"-Div ersetzt.
+                            </small>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>👁️ Trial of the Seeing Eye 👁️</h3>
+                <h4>Part 2</h4>
+                <small data-tooltip="Zu einem Piraten kann man Notizen sammeln. Diese werden in den Details angezeigt. Es gibt bereits ein Eingabefeld zur Erfassung - nur die Funktionalität fehlt. Implementiere auch diese ohne Full-Page-Refreshes mithilfe von HTMX.">
+                    Within the realm of pirates, one can gather notes, capturing their essence and preserving them for
+                    posterity. These invaluable notes shall be unveiled within the pirate details, offering a glimpse
+                    into their hidden depths. Behold, for an input field for capturing these notes already exists,
+                    awaiting the final touch of functionality. Fear not, for with the aid of HTMX, we shall breathe life
+                    into this feature, all without the need for disruptive full-page refreshes.
+                </small>
+                <small class="mt-4"
+                       data-tooltip="Notizen lassen sich auch löschen - hierfür gibt es direkt bei der Notiz einen Button. Implementiere auch dessen Funktionalität über HTMX.">
+                    The power to erase notes holds great significance. Fear not, for a button resides beside each note,
+                    yearning to be imbued with the power of deletion. With the aid of HTMX, we shall bestow upon this
+                    button the ability to fulfill its purpose, enabling the functionality to remove notes seamlessly.
+                </small>
+            </section>
+            <section>
+                <h3>Stuck? Zephyr will guide you the way 🐆</h3>
+                <ul>
+                    <li>
+                        <span role="button" _="on click toggle .hidden on next <p/>">Show me Hint 1</span>
+                        <p class="hidden">
+                            <small>
+                                Die Views die deine HTMX-Requests bearbeiten müssen gar nicht groß sein - oft reichen
+                                sogar ganz einfache Function-Based-Views aus. Ein Beispiel ist das Anlegen oder Löschen
+                                einer Notiz.
+                            </small>
+                        </p>
+                    </li>
+                    <li>
+                        <span role="button" _="on click toggle .hidden on next <p/>">Show me Hint 2</span>
+                        <p class="hidden">
+                            <small>
+                                HTMX liefert bei Requests, die von Formular-Elementen ausgelöst werden, automatisch die
+                                Daten des Formulars mit. Du kannst diese Daten in deiner View dann ganz einfach
+                                verwenden, um z.B. ein neues Objekt anzulegen.
+                            </small>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>🌟Well done adventurer🌟</h3>
+                <small data-tooltip="So kommt Weg zu einem Ende - doch verliere niemals die Neugierde. Der Blick lohnt sich immer!">
+                    As our journey draws to a close, remember to never lose your curiosity. For even as one path ends,
+                    countless others await to be explored. Embrace the allure of the unknown, for there are always
+                    wonders to behold and discoveries to be made. Keep your gaze steadfast and unwavering, for the
+                    rewards of seeking are boundless. So let us conclude this chapter, but never relinquish the flame of
+                    curiosity, for with every glance, the world unveils its treasures.
+                </small>
+                <small class="mt-4"
+                       data-tooltip="Zeige deine Lösung den Tutoren - anschließend kannst du den anderen Pfad erkunden.">
+                    Display your solution to the tutors, for their guidance and wisdom shall illuminate any shadows that
+                    remain. Once their discerning eyes have acknowledged your accomplishment, you shall be granted
+                    passage to explore the alternate path. May your footsteps echo with resilience and your heart be
+                    filled with the thrill of new adventures.
+                </small>
+            </section>
+        </section>
+
+         <section>
+            <h2>Choose wisely, wanderer</h2>
+            <div class="flex gap-4 w-full justify-center">
+                <a href="#/seeing_eye">
+                    <div class="h-64 w-40 flex items-center justify-center r-frame"
+                         data-tooltip="Frontend Entwicklung mit Django und HTMX">
+                        <h2>👁️</h2>
+                    </div>
+                </a>
+                <a href="#/revealing_key">
+                    <div class="h-64 w-40 flex items-center justify-center r-frame"
+                         data-tooltip="Backend Entwicklung mit Django-REST-Framework">
+                        <h2>🔑</h2>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="revealing_key">
+            <section>
+                <h2 class="r-fit-text">Path of the Revealing Key</h2>
+                <h2 class="r-fit-text">Backend Development with Django-REST-Framework</h2>
+            </section>
+            <section>
+                <small data-tooltip="Während du den Pfad des enthüllenden Schlüssels erkundest, gelangst du in einen Raum, der von einem
+                    sanften, strahlenden Licht durchflutet ist. In der Mitte des Raumes steht ein antiker Podest,
+                    geschmückt mit kunstvollen Schnitzereien und Symbolen, die die Kunst der Modellerstellung und
+                    RESTful APIs repräsentieren. Dieser Raum birgt offenbar die Geheimnisse des enthüllenden Schlüssels
+                    und dessen Verbindung zum Modellsystem von Django.">
+                    As you explore the path of the revealing key, you come across a room bathed in a soft, radiant glow.
+                    In the center of the room stands an ancient pedestal, adorned with intricate carvings and symbols
+                    that represent the art of model creation and RESTful APIs. This room, it seems, holds the secrets of
+                    the revealing key and its connection to Django's model system.
+                </small>
+                <small data-tooltip="Als du dich dem Podest näherst, offenbart ein Flüstern in der Luft die Herausforderung, die vor dir liegt. Um die Aufgabe abzuschließen, müssen alle verborgenen Artefakte in diesem Tempel gefunden werden. Dann enthüllt sich der mystische Schlüssel.">
+                    As you approach the pedestal, a whisper in the air reveals the challenge that lies ahead.
+                    To complete the challenge all hidden artifacts in this temple have to be found. Then the mystical
+                    key reveals itself.
+                </small>
+            </section>
+            <section>
+                <h3>🔑 Trail of the Revealing Key 🔑</h3>
+                <h4>Part 1</h4>
+                <small data-tooltip="Erstelle die drei Models und ihre Beziehungen. Schreibe für alle Models die vier CRUD Operationen.">
+                    To track your progress, you must create models and their relations within a new "revealingKey"
+                    app. For all the models you are tasked with creating CRUD (Create, Read, Update, Delete) endpoints
+                    using the Django REST Framework.
+
+                    Inspired by the energy of the room, you begin to envision the structure of your models. The first
+                    model that comes to mind is the "Artifact" model. It represents a unique item that holds a piece of
+                    hidden knowledge within the temple. The "Explorer" model represents the brave individuals who
+                    already discovered artefacts in the
+                    temple. An explorer can discover multiple artifacts during their journey. Also an artifact can be
+                    discovered by multiple explorers.
+
+                    Continuing your creative flow, you imagine another model named "SecretMessage." This model
+                    encapsulates cryptic messages concealed within the temple, guiding the explorers towards their
+                    ultimate goal. A "SecretMessage" is tied to a specific artifact. This connection implies that
+                    each secret message is associated with a particular
+                    artifact, revealing a hidden piece of knowledge or a clue necessary for progress.
+
+                    With your models taking shape, you turn your attention to crafting the CRUD endpoints. Following the
+                    principles of Django REST Framework, you create the necessary API endpoints for each model in the
+                    "revealingKey" app.
+                </small>
+            </section>
+            <section>
+                <h3>Stuck? Zephyr will guide you the way 🐆</h3>
+                <ul>
+                    <li>
+                        <span role="button" _="on click toggle .hidden on next <p/>">Show me Hint 1</span>
+                        <p class="hidden">
+                            <small>
+                                Schau mal hier <a href="https://www.django-rest-framework.org/tutorial/quickstart/"
+                                                  target="_blank">Django REST Framework</a>
+                            </small>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>🔑 Trail of the Revealing Key 🔑</h3>
+                <h4>Part 2</h4>
+                <small data-tooltip="Erstelle ein OpenAPI 3 Schema für die Endpunkte und binde Swagger und ReDOC UI ein.">
+                    As the adventurers journey along the path of the revealing key, you face the challenge of creating
+                    an OpenAPI 3 schema for the CRUD endpoints in the "revealingKey" app. You have to document the
+                    paths,
+                    endpoints, and parameters, while integrating Swagger and ReDOC UI to visually explore and interact
+                    with the schema. Swagger enables you to test the API endpoints, set parameters,
+                    and verify expected responses. ReDOC presents the schema in a user-friendly, appealing interface,
+                    allowing to navigate the documentation, view examples, and experiment with the
+                    endpoints. With this powerful tools you can easily track your further progress in the mystical world
+                    of Avalore's Lost Sanctum.
+                </small>
+            </section>
+            <section>
+                <h3>Stuck? Zephyr will guide you the way 🐆</h3>
+                <ul>
+                    <li>
+                        <span role="button" _="on click toggle .hidden on next <p/>">Show me Hint 1</span>
+                        <p class="hidden">
+                            <small>Schau mal hier <a
+                                    href="https://github.com/tfranzel/drf-spectacular/"
+                                    target="_blank">drf-spectacular</a>
+                            </small>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>🔑 Trail of the Revealing Key 🔑</h3>
+                <h4>Part 3</h4>
+                <small data-tooltip="Du machst dich auf zu deiner letzten Herausforderung, bei der du sinnvolle Filter für alle Felder implementieren und sie über die Swagger UI testen musst. Deine Aufgabe besteht darin, Filter zu entwickeln, die die Datenexploration verbessern und wertvolle Erkenntnisse liefern.">
+                    You embark on your final challenge, where you must implement filters for all fields and
+                    test them through the Swagger UI. These filters allow you to narrow down your
+                    search. One example might be a "contains"-filter used for the name of an artifact to uncover the most relevant
+                    artifacts with a specific word (e.g. "key").
+                </small>
+            </section>
+            <section>
+                <h3>Stuck? Zephyr will guide you the way 🐆</h3>
+                <ul>
+                    <li>
+                        <span role="button" _="on click toggle .hidden on next <p/>">Show me Hint 1</span>
+                        <p class="hidden">
+                            <small>Schau mal hier <a href="https://django-filter.readthedocs.io/en/stable/guide/usage.html#the-filter">django-filter</a> und hier <a
+                                    href=" https://www.django-rest-framework.org/api-guide/filtering/"
+                                    target="_blank">Filtering</a>
+                            </small>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>🌟Well done adventurer🌟</h3>
+                <small data-tooltip="Alle Herausforderungen gemeistert, Pfad des enthüllenden Schlüssels vollendet. Mit Vorfreude platzierst du den Schlüssel, und landest in einer Welt grenzenlosen Wissens und außergewöhnlicher Wunder von ... Django!">
+                    Having successfully overcome all three challenges and completed the path of the revealing key, you
+                    stand before the revealed key, brimming with anticipation. As you place the key into its rightful
+                    place, you are transported to a realm beyond imagination — a world of limitless knowledge and
+                    extraordinary wonders of ... Django!
+
+                    Armed with newfound wisdom and power, you embrace your destiny, delving further into the realm to
+                    continue your extraordinary journey.
+                </small>
+                <small class="mt-4"
+                       data-tooltip="Zeige deine Lösung den Tutoren - anschließend kannst du den anderen Pfad erkunden.">
+                    Display your solution to the tutors, for their guidance and wisdom shall illuminate any shadows that
+                    remain. Once their discerning eyes have acknowledged your accomplishment, you shall be granted
+                    passage to explore the alternate path. May your footsteps echo with resilience and your heart be
+                    filled with the thrill of new adventures.
+                </small>
+            </section>
+        </section>
+         <section>
+            <h2>Choose wisely, wanderer</h2>
+            <div class="flex gap-4 w-full justify-center">
+                <a href="#/seeing_eye">
+                    <div class="h-64 w-40 flex items-center justify-center r-frame"
+                         data-tooltip="Frontend Entwicklung mit Django und HTMX">
+                        <h2>👁️</h2>
+                    </div>
+                </a>
+                <a href="#/revealing_key">
+                    <div class="h-64 w-40 flex items-center justify-center r-frame"
+                         data-tooltip="Backend Entwicklung mit Django-REST-Framework">
+                        <h2>🔑</h2>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="dist/typed.js"></script>
+<script src="dist/hyperscript.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script src="dist/helper.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
+</html>

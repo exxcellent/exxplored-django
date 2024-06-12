@@ -1,0 +1,7 @@
+.idea/
+*.iml
+__pycache__/
+db.sqlite3
+# poetry.lock is Python version dependent so leave it out for now.
+poetry.lock
+

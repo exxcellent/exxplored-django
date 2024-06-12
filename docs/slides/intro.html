@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>eXXplore the unknown | student edition | Django</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/moon.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="reveal" _="
+init for withTooltip in <*[data-tooltip]/> call createTooltip(withTooltip, @data-tooltip of withTooltip) end
+on typeComplete call Reveal.layout()
+">
+    <div class="slides">
+        <section>
+            <h4>Willkommen zu deinem Abenteuer</h4>
+            <h1>Novice Explorer</h1>
+        </section>
+        <section>
+            <h4>Du wirst von deinem treuen Gefährten begleitet.</h4>
+            <h2>Scallywag the Sea Turtle 🐢</h2>
+            <small>Zögere nicht, seine Hilfe zu suchen.</small>
+        </section>
+        <section>
+            <section>
+                <h2 class="r-fit-text">Chapter 1</h2>
+                <h2 class="r-fit-text" data-tooltip="Alle deine Werkzeuge">
+                    Lerne dein Handwerk!
+                </h2>
+            </section>
+            <section>
+                <p data-tooltip="Du lernst zunächst die wichtigsten Werkzeuge und Basics für dein Abenteuer mit Django kennen.">
+                    Zuerst wirst du dich mit den grundlegenden Basics und Werkzeugen vertraut machen, dein Wissen für
+                    dein Abenteuer mit Django aufbauen und alles lernen, um deine Abenteuer zu meistern. </p>
+            </section>
+
+            <section data-auto-animate data-background-transition="zoom">
+                <h2>Was ist Django?</h2>
+            </section>
+            <section data-auto-animate>
+                <h2>Was ist Django?</h2>
+                <ul>
+                    <li class="fragment">Fullstack-Framework: es ist alles enthalten um eine Webanwendung zu entwickeln <i class="fas fa-atom"></i></li>
+                    <li class="fragment">
+                        D<span class="fragment" style="font-size:0.5em">on't</span>
+                        R<span class="fragment" style="font-size:0.5em">epeat</span>
+                        Y<span class="fragment" style="font-size:0.5em">ourself</span>
+                    </li>
+                    <li class="fragment">
+                        Client-Server Architektur <span style="font-size:0.5em">(Request-Response-Schema)</span>
+                    </li>
+                </ul>
+                <aside class="notes">
+                    <ul>
+                        <li>
+                            Fullstack -> alles enthalten um eine Webanwendung zu entwickeln (auch wenn man nicht alles
+                            verwenden muss!)
+                        </li>
+                        <li>
+                            Lässt sich nicht in ein Schema wie MVC etc. pressen, da nicht pedantisch → Praktikabilität
+                            zählt
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h2>ARCHITEKTUR</h2>
+                <img class="r-stretch" src="media/architecture.svg">
+            </section>
+            <section>
+                Die drei Hauptbestandteile der Django-Architektur: <br/><br/>
+                <ul>
+                        <li>MODEL: Arbeit mit Daten und Datenbanken</li>
+                        <li>TEMPLATE: Ausgabekomponente, die mithilfe eines Kontextes gefüllt werden</li>
+                        <li>
+                            FRAMEWORK: behandelt Kommunikation zwischen Benutzer + Datenbank und nimmt einem so viel der
+                            Arbeit ab, wie möglich
+                        </li>
+                </ul>
+            </section>
+            <section>
+                Zur Unterstützung während der Entwicklung:
+                <ul>
+                        <li>
+                             manage.py-Skript
+                            <ul>
+                                <li>erzeugt Migrationen</li>
+                                <li>startet Development-Server</li>
+                                <li>etc.</li>
+                            </ul>
+                        </li>
+                    </ul>
+            </section>
+            <section data-background-transition="zoom">
+                <h1>Du bist dran</h1>
+                <h2><small>beim</small> Projekt-Setup</h2>
+            </section>
+            <section>
+                <ol>
+                    <li>
+                        <i class="fab fa-gitlab"></i> Projekt auschecken:<br/>
+                        <a href="https://github.com/exxcellent/exxplored-django.git">
+                            https://github.com/exxcellent/exxplored-django.git
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fab fa-python"></i> Projekt in PyCharm öffnen
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h2 class="r-fit-text">Python Poetry Interpreter anlegen</h2>
+                <p>[strg] + [shift] + [a] &rarr; "python interpreter"</p>
+                <img height="400px" src="media/exercise/project_setup/pycharm.png">
+            </section>
+            <section>
+                <h2 class="r-fit-text">Development-Server starten</h2>
+                <p>In einem PyCharm Terminal
+                <pre><code data-trim>python manage.py runserver</code></pre>
+                aufrufen.
+                <p>Im Browser <a href="http://localhost:8000/" target="_blank">http://localhost:8000/</a> aufrufen</p>
+                <img height="300px" src="media/success.png">
+            </section>
+            <section>
+                <h2 class="r-fit-text">Interaktives Debugging aus der IDE</h2>
+                <p>Lege in PyCharm eine neue Run Configuration an:</p>
+                <img height="300px" src="media/exercise/project_setup/pycharm_debugging.png">
+                <p>Stoppe den zuvor über das Terminal gestarteten Server und starte die neue Run Configuration im Debug
+                    Modus.</p>
+            </section>
+            <section>
+                <h2>🎉 Fertig 🎉</h2>
+                <p>Erkunde doch ein wenig die Verzeichnisstruktur & Dateien des Repositories.</p>
+            </section>
+
+            <section>
+                <h2 class="r-fit-text">VERZEICHNISSTRUKTUR</h2>
+                <pre><code data-trim data-noescape>
+PROJEKT_ROOT
+|-+ <b>eXXploreDjango</b>         # Django-Projekt-Verzeichnis
+|   |-- <em>asgi.py</em>
+|   |-- <em>settings.py</em>      # Einstellungen zum Django-Projekt
+|   |-- <em>urls.py</em>          # URL-Definition für den Dispatcher
+|   |-- <em>wsgi.py</em>
+|-+ <b>app1</b>                 # Django-App 1
+|   |-- <b>migrations</b>       # Migrationen
+|   |-- <b>templates</b>        # Templates
+|   |-- <em>models.py</em>        # Models
+|   |-- <em>views.py</em>         # Views
+|-- <b>app2</b>                 # Django-App 2
+|-- <em>manage.py</em>            # Verwaltungsskript
+            </code></pre>
+                <aside class="notes">
+                    <ul>
+                        <li>Ausgehend vom Root</li>
+                        <li>"manage.py": Skript zur einfachen Verwaltung des Projektes</li>
+                        <li>"photogallery": Projekt-Konfigurationsverzeichnis</li>
+                        <li>"asgi/wsgi.py": (Asynchornous bzw. Web) Server Gateway Interface. Schnittstelle zwischen
+                            Webserver + Django-App
+                        </li>
+                        <li>"settings.py": Zentrale Konfigurations-Datei</li>
+                        <li>"urls.py": URL-Definition (zentrale Stelle weil URL-Dispatching projektweit gilt)</li>
+                        <li>weitere Verzeichnisse in der Regel Django-Apps</li>
+                        <li>"migrations": Migrationen der App</li>
+                        <li>"templates": Templates der App</li>
+                        <li>"models.py": Models der App</li>
+                        <li>"views.py": Views der App</li>
+                    </ul>
+                </aside>
+            </section>
+                <section>
+                    <h2>Quest 1.1</h2>
+                    <h3 class="r-fit-text">Deine erste App!</h3>
+                </section>
+                <section>
+                    <p>
+                        In Django werden logisch zusammenhängende Code-Stücke in Apps gebündelt. Diese Apps sollten so
+                        wiederverwendbar wie möglich sein.
+                        Lass uns deine erste App erschaffen.
+                    </p>
+                    <ul>
+                        <li class="fragment">Apps sollen <strong>reusable</strong> sein &rarr; Projekt in logische
+                            Einheiten
+                            teilen
+                        </li>
+                        <li class="fragment">
+                            Anlegen neuer App
+                            <pre><code data-trim>python manage.py startapp app1</code></pre>
+                        </li>
+                        <li class="fragment">Anschließend in INSTALLED_APPS innerhalb der "settings.py" eintragen</li>
+
+                    </ul>
+                    <div class="flex flex-col items-end text-base w-full">
+                        <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                            Du schaffst das! 🐢
+                        </button>
+                        <div class="hidden max-w-lg">
+                            Django erscheint vollständig ausgestattet mit all dem Equipment, das du brauchst. Ein treuer
+                            Begleiter dabei ist 'django-admin'. Du kannst ihn in deinem Projekt beschwören, indem du
+                            Folgendes aufrufst:</a>.
+                        </div>
+                    </div>
+                    <aside class="notes">
+                        <ul>
+                            <li>
+                                Apps sind logische Einheiten, die (theoretisch) zwischen verschiedenen Projekten
+                                austauschbar
+                                sein sollen
+                            </li>
+                            <li>
+                                Ein Projekt kann mehrere Apps beinhalten und eine App kann in verschiedenen Projekten
+                                eingesetzt werden.
+                            </li>
+                            <li>
+                                "Reusability matters" - wichtigstes Kriterium um eine sinnvolle Aufteilung in Apps zu
+                                realisieren
+                            </li>
+                            <li>Neue Apps lassen sich über "manage.py"-Script anlegen</li>
+                            <li>
+                                Kann man übrigens über PyCharm auch unterstützt aufrufen<br/>
+                                "Tools" -> "Run manage.py Task"
+                            </li>
+                            <li>
+                                Damit das Projekt die App auch verwenden kann, muss man sie in die INSTALLED_APPS
+                                innerhalb
+                                der "eXXploreDjango/settings.py" Datei eintragen. Da sind auch schon eine handvoll
+                                anderer
+                                Apps enthalten,
+                                die Django schon mitliefert
+                            </li>
+                        </ul>
+                    </aside>
+                </section>
+        </section>
+        <section>
+            <section data-auto-animate data-background-transition="zoom">
+                <h2 class="r-fit-text">Chapter 2</h2>
+                <h2 class="r-fit-text">Django Views</h2>
+            </section>
+            <section data-auto-animate>
+                <h2>Der erste View</h2>
+                <blockquote>
+                    &bdquo;Views sind Python-Methoden, die einen Request entgegen nehmen und mit einem Response
+                    antworten&ldquo;
+                    <span style="font-size: 0.2em; white-space: nowrap">Zitat: Die Tutoren (heute)</span>
+                </blockquote>
+                <aside class="notes">
+                    <p>Zentral: ZITAT!</p>
+                </aside>
+            </section>
+            <section data-auto-animate>
+                <h2>Der erste View</h2>
+                <ul>
+                    <li class="fragment">View werden über eine/mehrere Path(s) angesprochen</li>
+                    <li class="fragment">Dispatcher weiß dadurch, ob und was er im Fall eines Requests an eine URL tun soll</li>
+                    <li class="fragment">
+                            Dispatcher ruft die Methode mit dem aktuellen Request und etwaigen Parametern auf
+                        </li>
+                    <li class="fragment">Alle URLs (Endpoints) werden in einer zentralen Datei ("urls.py") gepflegt und sind projektweit gültig </li>
+                </ul>
+                <aside class="notes">
+                    <ul>
+                        <li>Views werden einer/mehrerer Paths zugeordnet</li>
+                        <li>dadurch weiß der Dispatcher ob und was er im Fall eines Requests an eine URL tun soll</li>
+                        <li>
+                            Dispatcher ruft dann die Methode mit dem aktuellen Request (alle Infos zum Aufruf) und
+                            etwaigen
+                            Parametern (können über den Path definiert werden) auf
+                        </li>
+                        <li>Alle URLs (Endpoints) werden in einer zentralen Datei gepflegt und sind projektweit gültig
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h2>Beispiel</h2>
+                <pre class="fragment"><code data-trim class="language-python" data-line-numbers="2|4|6-8">
+                    <script type="text/template">
+    # urls.py
+    from django.urls import path
+
+    from . import views
+
+    urlpatterns = [
+    path('today/', views.current_datetime),
+    ]
+                </script></code></pre>
+                <pre class="fragment"><code data-trim class="language-python" data-line-numbers="2-3|5|6-8|8">
+                    <script type="text/template">
+    # views.py
+    from django.http import HttpResponse
+    import datetime
+
+    def current_datetime(request):
+    now = datetime.datetime.now()
+    html = "
+    <html><body>It is now %s.</body></html>" % now
+    return HttpResponse(html)
+                </script></code></pre>
+                <aside class="notes">
+                    <ul>
+                        <li>Code durchsteppen und bisschen was dazu sagen</li>
+                        <li>
+                            HttpResponse erklären: Gibt einfach den gegebenen HTML-Code als Response mit einem Status
+                            200
+                            zurück
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+            <section data-background-transition="zoom">
+                <h2>Quest 2.1</h2>
+                <h3 class="r-fit-text">Und jetzt dein erster View!</h3>
+                <aside class="notes">
+                    Geschätzte Dauer: 45 min
+                </aside>
+            </section>
+            <section>
+                <p>Erstelle in deinem Projekt eine neue App "pirate_ship"</p>
+            </section>
+            <section>
+
+                <p>Lege in dieser neuen App einen View an, der die Anzahl der Piraten anzeigt, die bereits
+                    über die Planke gegangen sind. Außerdem soll ein Link angezeigt werden,
+                    um die Zahl um 1 zu erhöhen, sowie ein weiterer Link, um die Zahl um 1 zu verringern.
+                </p>
+                <p>So ähnlich sollte es aussehen:<br/>
+                <div style="text-align: center"><a href="#less">weniger</a> | <strong>über die Planke: 5</strong> | <a
+                        href="#more">mehr</a></div>
+                </p>
+
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Brauchst du einen Tipp? 🐢
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Für diese Aufgabe reicht es, einfaches HTML zurückgeben zu lassen z.B. "&lt;html&gt; &lt;body&gt;...&lt;/html&gt;".format(...)
+                        <p x-show="show">
+                            Werf doch mal einen Blick auf folgende Doku:
+                            <a href="https://docs.djangoproject.com/en/3.2/topics/http/urls/#example" target="_blank">Django
+                                URL-Dispatcher</a>
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section>
+                <h2>Quest 2.2</h2>
+                <h3 class="r-fit-text">Aye Aye Captain!</h3>
+            </section>
+            <section>
+                <p>Lege einen weiteren View an, der den Benutzer nach dem Name des Kapitäns fragt</p>
+                <p>
+                <div style="text-align: center">
+                    Name: <input/>
+                    <button>Greet</button>
+                </div>
+                </p>
+                <p>
+                    Der Name soll abgesendet werden können und anschließend den Kapitän mit seinem Namen
+                    freundlich
+                    begrüßen. Außerdem soll die Begrüßungsseite einen Link zurück zur Namenseingabe enthalten.
+                </p>
+                <div style="text-align: center">
+                    <strong>Aye aye Captain Blackbeard!</strong> <a href="#">back</a>
+                </div>
+
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Brauchst du einen Tipp? 🐢
+                    </button>
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Für diese Aufgabe reicht es, einfaches HTML zurückgeben zu lassen z.B. "&lt;html&gt; &lt;body&gt;...&lt;/html&gt;".format(...)
+                        <p x-show="show">
+                            Dein Formular im HTML setzt normalerweise ein POST-Request ab. Die Daten daraus kannst
+                            du aus dem
+                            <a href="https://docs.djangoproject.com/en/3.2/ref/request-response/#module-django.http"
+                               target="_blank">request-Parameter</a>
+                            deines Views auslesen.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+            <section>
+                <h2>🎉 Fertig 🎉</h2>
+                <p>Sternchenaufgabe: Versuche doch auf eine Falscheingabe (leer?) des Namens mit
+                    einer entsprechenden Meldung zu reagieren.</p>
+            </section>
+        </section>
+
+        <section>
+            <section data-background-transition="zoom">
+                <h2 class="r-fit-text">Chapter 3</h2 class="r-fit-text">
+                <h2 class="r-fit-text">Templates</h2 class="r-fit-text">
+            </section>
+            <section>
+                <h3 class="r-fit-text">Was versteht Django unter Templates?</h3>
+                <ul>
+                    <li class="fragment">
+                        Plain-Text-Dateien<br/>
+                        <em>+ Template-Syntax</em><br/>
+                        <em>+ Daten-Kontext</em>
+                    </li>
+                    <li class="fragment">Verschiedene Template-Sprachen verfügbar</li>
+                    <li class="fragment">Möglichst wenig &bdquo;Logik&ldquo;</li>
+                </ul>
+            </section>
+            <section>
+                <h2>
+                    D
+                    <div style="font-size: 0.5em; display: inline-block">jango</div>
+                    T
+                    <div style="font-size: 0.5em; display: inline-block">emplate</div>
+                    L
+                    <div style="font-size: 0.5em; display: inline-block">anguage</div>
+                </h2>
+                <ul>
+                    <li class="fragment">Mitgeliefert + Standard</li>
+                    <li class="fragment">Variablen: Befüllt durch Kontext</li>
+                    <li class="fragment">Filter: Ändern den Wert einer Variablen und geben ihn aus</li>
+                    <li class="fragment">Tags: Kontrollstrukturen und mehr</li>
+                    <li class="fragment">Kommentare</li>
+                    <li class="fragment">Vererbung</li>
+                    <li class="fragment"><a href="https://docs.djangoproject.com/en/3.2/ref/templates/language/"
+                                            target="_blank">Hier gehts zur Doku <i
+                            class="fas fa-external-link-square-alt"></i></a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Beispiel
+                    <div style="font-size: 0.3em"><em>Basistemplate</em></div>
+                </h2>
+                <pre style="font-size: 0.3em"><code data-trim class="language-django">
+                <script type="text/template">
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <link rel="stylesheet" href="style.css">
+                <title>{% block title %}My amazing site{% endblock %}</title>
+            </head>
+
+            <body>
+                <div id="sidebar">
+                    {% block sidebar %}
+                        <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                    {% endblock %}
+                </div>
+
+                <div id="content">
+                    {% block content %}{% endblock %}
+                </div>
+            </body>
+            </html>
+            </script></code></pre>
+            </section>
+            <section>
+                <h2>Beispiel
+                    <div style="font-size: 0.5em"><em>Seitentemplate</em></div>
+                </h2>
+                <pre><code data-trim class="language-django">
+                <script type="text/template">
+{% extends "base.html" %}
+
+{% block title %}My amazing blog{% endblock %}
+
+{% block content %}
+    {% for entry in blog_entries %}
+        <h2>{{ entry.title }}</h2>
+        <p>{{ entry.body }}</p>
+    {% endfor %}
+{% endblock %}
+            </script></code></pre>
+            </section>
+
+            <section data-background-transition="zoom">
+                <h2>Quest 3.1</h2>
+                <h3 class="r-fit-text">Dein erstes Template!</h3>
+                <aside class="notes">
+                    Geschätzte Dauer: 1,5 h
+                </aside>
+            </section>
+            <section>
+                <ol>
+                    <li style="font-size: 0.75em">
+                        Lege in deiner &bdquo;pirate_ship&ldquo; app ein neues Verzeichnis &bdquo;templates&ldquo; an.
+                        Platziere
+                        dort eine neue &bdquo;first_template.html&ldquo; (Rechtsklick auf den Ordner -> &bdquo;New&ldquo;
+                        ->
+                        &bdquo;HTML File&ldquo;) und fülle den Body mit etwas Text. Lege einen neuen View sowie Route
+                        an,
+                        der die neue &bdquo;first_template.html&ldquo; über den &bdquo;render()&ldquo;-Shortcut
+                        (<a href="https://docs.djangoproject.com/en/3.2/topics/http/shortcuts/" target="_blank">Django-Render-Shortcut</a>)
+                        ausgibt.
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <ol start="2">
+                    <li style="font-size: 0.75em">
+                        Deine Laufzeitumgebung enthält schon eine Fremd-App namens &bdquo;bootstrap4&ldquo; (außerhalb
+                        der Verzeichnisstruktur) die das
+                        Bootstrap-CSS-Framework bereitstellt.<br/>
+                        Die Library bietet verschiedene Template-Tags an, die eine
+                        Einbindung der Static-Files von Bootstrap erleichtern.
+                        Binde die App &bdquo;bootstrap4&ldquo; in dein Projekt ein (&bdquo;settings.py&ldquo;). Lege ein
+                        neues Template &bdquo;first_bootstrap_template.html&ldquo; an und binde die CSS und JS Teile im
+                        Head
+                        des Dokumentes ein
+                        (<a href="https://django-bootstrap4.readthedocs.io/en/latest/quickstart.html" target="_blank">Django-Bootstrap4-Doku</a>).<br/>
+                        Teste alles mithilfe eines neuen Views, Route + einigen Features des Bootstrap Frameworks (z.B.
+                        Alerts etc.).
+                    </li>
+
+                    <div class="flex flex-col items-end text-base w-full">
+                        <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                            Brauchst du einen Tipp? 🐢
+                        </button>
+                        </button>
+                        <div class="hidden max-w-lg">
+                            <p x-show="show">
+                                <a href="https://django-bootstrap4.readthedocs.io/en/latest/quickstart.html#:~:text=%7B%25%20bootstrap_css%20%25%7D%0A%7B%25%20bootstrap_javascript%20jquery%3D%27full%27%20%25%7D"
+                                   target="_blank">Diese Zeilen</a>
+                                müssen in den &lt;head&gt; deines HTML-Dokumentes. Anschließend kannst du Bootstrap
+                                vollumfänglich in deinem Template nutzen!
+                            </p>
+                        </div>
+                    </div>
+                </ol>
+            </section>
+            <section>
+                <ol start="3">
+                    <li style="font-size: 0.75em">
+                        Kopiere das Template aus 2. als &bdquo;base.html&ldquo;. Dieses soll als Basis für beliebige
+                        Seiten
+                        verwendet werden können. Hier enthalten sein sollen alle Teile, die nicht spezifisch einer
+                        bestimmten Seite zugeordnet werden können (Header, Imports, evtl. Basislayout der Anwendung).
+                        Ersetze alle Stellen, die Inhalt enthalten, durch Blöcke, die durch spätere Templates dann mit
+                        Inhalten gefüllt werden können (<a
+                            href="https://docs.djangoproject.com/en/3.2/ref/templates/language/#template-inheritance">DTL-Doku</a>).
+                        Erstelle ein weiteres Template, das die gleiche Seite erzeugt wie <a href="#/22/2">2.</a>, aber
+                        selbst
+                        nur das &bdquo;base.html&ldquo;
+                        extended und die notwendigen Blöcke befüllt. Zeige die Seite über einen eigenen View + Route an.
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <ol start="4">
+                    <li style="font-size: 0.75em">
+                        Lege ein Template an, das vom View per Kontext eine Liste von Schiffsnamen
+                        erhält und diese in einer zweispaltigen Bootstrap Tabelle anzeigt. Schiffsnamen, die ein
+                        Leerzeichen
+                        enthalten, sollen dabei mit dem Info-Background (Blau) hinterlegt werden. Die Nummer des Schiffs
+                        <em>kannst</em> du vom View aus mitgeben - musst du aber nicht. Versuche es auch mal ohne 😄
+                    </li>
+                </ol>
+                <table>
+                    <tr>
+                        <th>#</th>
+                        <th>Ship</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td style="background: #add8e6">Black Pearl</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Roebuck</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Bonita</td>
+                    </tr>
+                </table>
+            </section>
+            <section x-data="{ showing: false }">
+                <h2>🎉 Fertig 🎉</h2>
+                <p>Trinke einen ☕<br/><small>oder schau dir Jinja2 an. Das ist eine weitere Templating-Sprache die
+                    offiziell von Django unterstützt
+                    wird. Werf doch mal einen Blick in
+                    <a href="https://jinja.palletsprojects.com/en/3.0.x/" target="_blank">deren Doku!</a></small></p>
+            </section>
+        </section>
+
+        <section>
+            <section data-auto-animate data-background-transition="zoom">
+                <h2 class="r-fit-text">Chapter 4</h2>
+                <h2 class="r-fit-text">Object Relational Mapping</h2>
+            </section>
+            <section>
+                <p data-tooltip="Django kommt bereits mit einem ORM zur Datenhaltung, das tatsächliche Datenbank meistens vollständig abstrahiert.">
+                    Die grundlegenden Bestandteile von Django sind das ORM (Object-Relational Mapping), ein Werkzeug zur
+                    Datenbankinteraktion, und die Verwaltung von URLs.
+                </p>
+            </section>
+            <section>
+                <p data-tooltip="Man legt sogenannte Models an (einfache Python Klassen) - Django kümmert sich dann um die persistente Speicherung. Änderungen an den Models sorgen natürlich für Änderungen am Datenbankschema - diese können in fast allen Fällen automatisch mit 'django-admin' erstellt werden.">
+                    In Django erstellt man Entitäten namens "Models" – einfache Python-Klassen. Django übernimmt die
+                    Verantwortung, diese Entitäten dauerhaft zu speichern. Jegliche Änderungen an diesen Models werden
+                    automatisch im Datenbankschema reflektiert, und in den meisten Fällen kann das Verwaltungstool
+                    "django-admin" diese Änderungen automatisch umsetzen.
+                </p>
+            </section>
+            <section>
+                <p data-tooltip="Beispiel">Ein Beispiel:</p>
+                <!-- @formatter:off -->
+                <pre><code data-trim class="language-python"><script type="text/template">
+# models.py
+from django.db import models
+
+class Book(models.Model):
+    title = models.CharField(max_length=200)
+    author = models.CharField(max_length=100)
+    publication_date = models.DateField()
+                </script></code></pre>
+                <!-- @formatter:on -->
+            </section>
+            <section>
+                <h2>Quest 4.1</h2>
+                <small data-tooltip="Erstelle ein Model 'Treasure', in dem du Informationen zu einem gefundenen Schatz speichern kannst (z.B. Fundort, Funddatum, geschätztes Alter, Beschreibung).">
+                    Erstelle in deiner Django-Anwendung ein Model namens 'Treasure', das dazu dient, einen entdeckten
+                    Schatz innerhalb deines Schiffes zu halten. Dieses Model ermöglicht es, wichtige Informationen wie
+                    den Fundort des Schatzes, das Datum seiner Entdeckung, seinen geschätzten Wert und eine fesselnde
+                    Beschreibung zu speichern.
+                </small>
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Du schaffst das! 🐢
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Hier findest du die Dokumentation zu <a target="_blank"
+                                                                href="https://docs.djangoproject.com/en/4.2/ref/models/fields/#field-types">Django-Feldtypen</a>.
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Quest 4.2</h2>
+                <small data-tooltip="Lass durch 'django-admin' eine entsprechende Datenbank-Migration erstellen. Führe diese anschließend aus.">
+                    Nutze 'django-admin', um eine Datenbankmigration für den Schatzkatalog zu erstellen. Führe dann
+                    diese Migration aus, um den Schatz innerhalb der Datenbank zum Leben zu erwecken.
+                </small>
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Weiter so! 🐢
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Hier findest du die Dokumentation zu <a target="_blank"
+                                                                href="https://docs.djangoproject.com/en/4.2/ref/django-admin/">'django-admin'</a>.
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Quest 4.3</h2>
+                <small data-tooltip="Lege über die interaktive Python-Konsole neue 'Treasure'-Objekte an.">
+                    Nutze die interaktive Python-Konsole, um neue 'Treasure'-Entitäten zu erstellen. Gib diesen Objekten
+                    Leben, indem du ihnen die Essenz der Schätze einhauchst, die du bewahren möchtest.
+                </small>
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Gleich geschafft! 🐢
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Hier findest du die Dokumentation zu <a target="_blank"
+                                                                href="https://docs.djangoproject.com/en/4.2/ref/models/instances/">Django-Models</a>.
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Quest 4.4</h2>
+                <small data-tooltip="Erstelle einen neuen View, in dem du alle in Datenbank existenten 'Treasure'-Objekte und deren Informationen ausgibst.">
+                    Erstelle eine neue Ansicht, in der alle vorhandenen 'Treasure'-Entitäten aus der Datenbank angezeigt
+                    werden. Nutze die Funktionen von Django, um diese Schätze abzurufen und ihren Wert darzustellen.
+                </small>
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Braucht du einen Tipp? 🐢
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Du benötigst einen View + Template + URL. Abrufen kannst du die Objekte in der Datenbank durch
+                        <a target="_blank" href="https://docs.djangoproject.com/en/4.2/ref/models/querysets/">Django-QuerySets</a>.
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Quest 4.5</h2>
+                <small data-tooltip="Füge ein weiteres Attribut 'notes' zu 'Treasure' hinzu. Lass 'django-admin' eine entsprechende Migration erstellen und führe diese aus. Zeige das Attribut auch auf deinem View an.">
+                    Füge der 'Treasure'-Entität ein zusätzliches Attribut namens 'notes' hinzu. Verwende 'django-admin',
+                    um eine Migration zu erstellen, die diese Erweiterung erfasst. Führe die Migration aus, um 'notes'
+                    in der Datenbank zu manifestieren. Zeige dieses neue Attribut in deiner Ansicht an, sodass es neben
+                    den anderen Informationen jedes Schatzes angezeigt wird.
+                </small>
+            </section>
+        </section>
+        <section>
+            <section data-auto-animate data-background-transition="zoom">
+                <h2 class="r-fit-text">Chapter 5</h2>
+                <h2 class="r-fit-text">Django Admin</h2>
+            </section>
+            <section>
+                <p data-tooltip="Django liefert bereits eine App namens 'django.contrib.admin' mit. Diese erstellt vollständige Admin-Ansichten für alle Models in einem Projekt - inklusive entsprechender Workflows wie Create, Edit, Delete.">
+                    Django liefert bereits eine App namens 'django.contrib.admin' mit. Diese erstellt vollständige
+                    Admin-Ansichten für alle Models in einem Projekt - inklusive entsprechender Workflows wie Create,
+                    Edit, Delete.
+                </p>
+            </section>
+            <section>
+                <p data-tooltip="In deinem Projekt ist 'django.contrib.admin' bereits aktiviert. Die zu verwaltenden Models müssen nur noch registriert werden und schon erhält man entsprechende Ansichten!">
+                    In deinem Projekt ist 'django.contrib.admin' bereits aktiviert. Die zu verwaltenden Models müssen
+                    nur noch registriert werden und schon erhält man entsprechende Ansichten!
+                </p>
+            </section>
+            <section>
+                <p data-tooltip="Beispiel">Ein Beispiel:</p>
+                <!-- @formatter:off -->
+                <pre><code data-trim class="language-python"><script type="text/template">
+# admin.py
+from django.contrib import admin
+from myapp.models import Book
+
+
+class BookAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Book, BookAdmin)
+                </script></code></pre>
+                <!-- @formatter:on -->
+            </section>
+            <section>
+                <h2>Quest 5.1</h2>
+                <small data-tooltip="Registriere dein 'Treasure'-Model in 'django.contrib.admin'. Für den Zugriff auf die Admin-Seiten musst du noch einen Benutzer anlegen (ja, Django kommt automatisch mit einer vollständigen Benutzer-/Rechteverwaltung). Hierfür kannst du wieder 'django-admin' verwenden.">
+                    Registriere dein 'Treasure'-Model in 'django.contrib.admin'. Für den Zugriff auf die Admin-Seiten
+                    musst du noch einen Benutzer anlegen (ja, Django kommt automatisch mit einer vollständigen
+                    Benutzer-/Rechteverwaltung). Hierfür kannst du wieder 'django-admin' verwenden.
+                </small>
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Gut so! 🐢
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Hier die Dokumentation zum Befehl für die <a target="_blank"
+                                                                     href="https://docs.djangoproject.com/en/4.2/ref/django-admin/#createsuperuser">Benutzer-Erstellung</a>.
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Quest 5.2</h2>
+                <small data-tooltip="Rufe die Django-Admin-Seiten auf und erstelle, editiere und lösche einige 'Treasures'. Welche anderen Models siehst du schon im Admin?">
+                    Rufe die Django-Admin-Seiten auf und erstelle, editiere und lösche einige 'Treasures'. Welche
+                    anderen Models siehst du schon im Admin?
+                </small>
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Weiter so! 🐢
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Die Django-Admin-Seite ist genauso wie deine eigenen Views in der 'urls.py' registriert.
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section data-auto-animate data-background-transition="zoom">
+                <h2 class="r-fit-text">Chapter 6</h2>
+                <h2 class="r-fit-text">Forms</h2>
+            </section>
+
+            <section>
+                <h2 class="r-fit-text">Was sind Django-Forms?</h2>
+                <img src="media/forms.svg">
+                <aside class="notes">
+                    <ul>
+                        <li>Python-Klassen</li>
+                        <li>Ähnlich zu Models aber für Dateneingabe</li>
+                        <li>Erzeugen aus Klasse automatisch HTML-Formular</li>
+                        <li>Extrahieren Eingaben aus Request</li>
+                        <li>Validieren Eingaben und übersetzen sie in Python Datentypen</li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <ul>
+                        <li>Python-Klassen</li>
+                        <li>Ähnlich zu Models aber für Dateneingabe</li>
+                        <li>Erzeugen aus Klasse automatisch HTML-Formular</li>
+                        <li>Extrahieren Eingaben aus Request</li>
+                        <li>Validieren Eingaben und übersetzen sie in Python Datentypen</li>
+                    </ul>
+            </section>
+            <section>
+                <h3>Beispiel</h3>
+                <pre class="fragment"><code data-trim class="language-html" data-line-numbers="2-4">
+<script type="text/template">
+<form action="/your-name/" method="post">
+    <label for="your_name">Your name: </label>
+    <input id="your_name" type="text" name="your_name"
+           maxlength="100" required>
+    <input type="submit" value="OK">
+</form>
+</script>
+            </code></pre>
+                <pre class="fragment"><code data-trim class="language-python">
+<script type="text/template">
+from django import forms
+
+class NameForm(forms.Form):
+your_name = forms.CharField(label='Your name', max_length=100)
+</script>
+            </code></pre>
+                <aside class="notes">
+                    <ul>
+                        <li>Oben HTML-Code - unten selbes Formular als Django-Formular</li>
+                        <li>Übernimmt auch schon teilweise Validierung in den Client (maxlength etc.)</li>
+                        <li>form-Tag + submit-Button sind standardmäßig nicht teil eines Django-Forms</li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h3>Model-Forms</h3>
+                <h4><small>Automatische Erstellung einer Form aus einem Model</small></h4>
+                <pre class="fragment"><code data-trim class="language-python">
+<script type="text/template">
+class Person(models.Model):
+name = models.CharField(max_length=100)
+birth_date = models.DateField(blank=True, null=True)
+</script>
+            </code></pre>
+                <pre class="fragment"><code data-trim class="language-python">
+<script type="text/template">
+class PersonForm(ModelForm):
+class Meta:
+model = Person
+exclude = []
+</script>
+            </code></pre>
+                <aside class="notes">
+                    <ul>
+                        <li>oben ein Person-Model</li>
+                        <li>unten die Definition des Forms</li>
+                        <li>(editable) Attribute werden automatisch zu passenden inputs</li>
+                        <li>ModelForms bieten save()-Methode um neue Instanz anzulegen/bestehende zu aktualisieren</li>
+                        <li>neue Felder landen sofort im Form - ohne es jemals wieder anzufassen!</li>
+                        <li>DRY in seiner reinsten Form!</li>
+                    </ul>
+                </aside>
+            </section>
+            <section data-background-transition="zoom">
+                <h2>Jetzt deine</h2>
+                <h1 class="r-fit-text"><small>eigenen</small> Forms</h1>
+                <aside class="notes">
+                    Geschätzte Dauer: 1,5 h
+                </aside>
+            </section>
+            <section>
+                <h2>Quest 6.1</h2>
+                <ol start="1">
+                    <li>
+                        Erstelle einen View + Template um einen 'Treasure' über ein ModelForm <strong>anzulegen</strong>.
+                        Validierungsfehler
+                        sollen angezeigt werden.
+                    </li>
+                    <li>
+                        Erstelle einen View + Template um einen 'Treasure' über ein ModelForm zu
+                        <strong>editieren</strong>.
+                        Validierungsfehler sollen angezeigt werden.
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h2>🎉 Fertig 🎉</h2>
+            </section>
+        </section>
+
+        <section>
+            <section data-background-transition="zoom">
+                <h2 class="r-fit-text">Chapter 7</h2>
+                <h2>(Generic) Class-Based-Views</h2>
+            </section>
+            <section>
+                <h2 class="r-fit-text">Was sind Class-Based-Views?</h2>
+                <ul>
+                    <li class="fragment">Klassen, die eine dispatch()-Methode anbieten</li>
+                    <li class="fragment">dispatch() wird vom URL-Dispatcher aufgerufen (wie eine View-Methode)</li>
+                    <li class="fragment">Modular + erweiterbar durch Vererbung etc.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Beispiel</h3>
+                <pre class="fragment"><code data-trim class="language-python">
+<script type="text/template">
+from django.http import HttpResponse
+
+def my_view(request):
+if request.method == 'GET':
+# view logic
+return HttpResponse('result')
+</script>
+            </code></pre>
+                <pre class="fragment"><code data-trim class="language-python">
+<script type="text/template">
+from django.http import HttpResponse
+from django.views import View
+
+class MyView(View):
+def get(self, request):
+# view logic
+return HttpResponse('result')
+</script>
+            </code></pre>
+            </section>
+            <section>
+                <h2 class="r-fit-text">Und was sind Generic Views?</h2>
+                <ul>
+                    <li>Mitgelieferte Views, die alle Standardfälle abdecken</li>
+                    <li class="fragment">
+                        Immer Konglomerat aus Mixins + Basis-View
+                        <ul>
+                            <li>Mixins implementieren Funktionalität</li>
+                            <li>Werden im Basis-View nur noch aufgerufen + zusammengesteckt</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">Empfehlung: Immer zuerst in Django-Doku nachsehen, ob es schon was Fertiges
+                        gibt
+                    </li>
+                </ul>
+                <aside class="notes">
+                    <ul>
+                        <li>Empfehlung: In Django Doku nachschlagen obs was ähnliches/gleiches wie die Anforderung
+                            gibt
+                        </li>
+                        <li>Wenn nicht vollständig erfüllt: Mixins extenden + anpassen</li>
+                        <li>Super Codequalität + Dokumentation = weniger zu schreiben/testen!</li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h3>Beispiel BaseDetailView</h3>
+                <pre class="fragment"><code data-trim class="language-python">
+<script type="text/template">
+class BaseDetailView(SingleObjectMixin, View):
+"""A base view for displaying a single object."""
+def get(self, request, *args, **kwargs):
+self.object = self.get_object()
+context = self.get_context_data(object=self.object)
+return self.render_to_response(context)
+</script>
+            </code></pre>
+                <pre class="fragment"><code data-trim class="language-python">
+<script type="text/template">
+class SingleObjectMixin(ContextMixin):
+"""
+Provide the ability to retrieve a single object for further manipulation.
+"""
+def get_object(self, queryset=None):
+# implementation for getting the object based on an id given in e.g. the URL
+# [...]
+</script>
+            </code></pre>
+            </section>
+            <section data-background-transition="zoom">
+                <h2>Langsam wird's</h2>
+                <h1 class="r-fit-text"><small>richtig</small> produktiv</h1>
+                <aside class="notes">
+                    Geschätzte Dauer: 2 h
+                </aside>
+            </section>
+            <section>
+                <h2>Quest 7.1</h2>
+
+                        Erstelle eine Class-Based-View zur Auflistung aller 'Treasures'. Verwende
+                        hierzu die Generic-Views, die Django schon mitliefert.
+
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Weiter so! 🐢
+                    </button>
+                    <div class="hidden max-w-lg">
+                                <a href="https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-display/#listview"
+                                   target="_blank">ListView</a>
+
+                    </div>
+                </div>
+
+
+            </section>
+            <section>
+                <h2>Quest 7.2</h2>
+                        Baue deine Views zum Anlegen/Editieren von 'Treasure'-Objekten auf Class-Based-Views um.
+                        Verwende
+                        hierzu die Generic-Views, die Django schon mitliefert. Interessant ist auch das Handling
+                        bei einem erfolgreichen Speichern (also keine ValidationErrors), denn hierbei muss Django
+                        entscheiden, wohin der Anwender weitergeleitet wird. Django gibt dir bei fehlender Konfiguration
+                        Hinweise, was du tun musst!
+
+
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Weiter so! 🐢
+                    </button>
+                    <div class="hidden max-w-lg">
+                                Im Standardfall verwendet Django die
+                                <a href="https://docs.djangoproject.com/en/3.2/ref/models/instances/#get-absolute-url"
+                                   target="_blank">get_absolute_url()</a>-Methode
+                                deines Models und leitet nach dem Speichern auf die dort zurückgegebene URL weiter.
+
+                    </div>
+                </div>
+
+
+            </section>
+            <section>
+                <h2>Quest 7.3</h2>
+                        Man soll einzelne 'Treasures' auch löschen können - implementiere hierzu die Funktionalität
+                        inkl.
+                        einer Rückfrage, ob man sich wirklich sicher ist.
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Weiter so! 🐢
+                    </button>
+                    <div class="hidden max-w-lg">
+                                Die Dokumentation des
+                                <a href="https://docs.djangoproject.com/en/3.2/ref/class-based-views/generic-editing/#django.views.generic.edit.DeleteView"
+                                   target="_blank">DeleteView</a>
+                                könnte dir helfen!
+                    </div>
+                </div>
+
+
+            </section>
+            <section>
+                <h2>Quest 7.4</h2>
+                        Aktuell lassen wir den Benutzer im Dunklen, ob das Anlegen/Bearbeiten/Löschen überhaupt
+                        funktioniert hat - das wollen wir ändern. Django bietet über das <a
+                            href="https://docs.djangoproject.com/en/3.2/ref/contrib/messages/" target="_blank">Messages-Framework</a>
+                        eine integrierte Möglichkeit einmalige Benachrichtigungen an den Benutzer weiterzugeben, die
+                        über genau solche Sachverhalte aufklären. Implementiere entsprechende Messages beim
+                        Anlegen/Bearbeiten/Speichern. Das Basis-Template ist ein guter Platz diese Messages zu rendern.
+                        Beachte auch die Dokumentation von django-bootstrap4 in Bezug auf messages.
+
+            </section>
+            <section>
+                <h2>🎉 Fertig 🎉</h2>
+            </section>
+        </section>
+
+     <section>
+            <section>
+                <h2 class="r-fit-text">Hey, adventurer</h2>
+                <h2 class="r-fit-text" data-tooltip="Deine ersten Schritte sind getan">
+                    Deine ersten Schritte sind gemacht und markieren den Beginn einer großen Reise, bei der Mut und Klugheit deine Geschichte prägen werden.
+                </h2>
+            </section>
+            <section>
+                <p>⭐</p>
+                <span data-tooltip="Deine ersten Schritte sind getan">
+                    Du beherrscht nun die wichtigsten Werkzeuge und kannst nun auf einem höheren Schwierigkeitsgrad dein Abenteuer fortsetzen .
+                </span>
+                <p>⭐</p>
+            </section>
+            <section>
+                <a class="cursor-pointer" href="intermediate.html" target="_blank">
+                    <h4 class="r-frame" data-tooltip="Fortgeschritten">Auf in ein neues Abenteuer als 'Adventurous Artifact Conqueror'</h4>
+                </a>
+            </section>
+        </section>
+
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="dist/typed.js"></script>
+<script src="dist/hyperscript.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script src="dist/helper.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
+</html>

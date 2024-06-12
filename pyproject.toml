@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "eXXploreDjango"
+version = "0.1.0"
+description = ""
+authors = ["wwermund <wolfgang.wermund@exxcellent.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.2"
+django-bootstrap4 = "^23.1"
+djangorestframework = "^3.14.0"
+django-filter = "^23.2"
+drf-spectacular = "^0.26.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

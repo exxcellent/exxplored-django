@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Explore DJANGO - Adventurous Artifact Conqueror</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/moon.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="reveal" _="
+init for withTooltip in <*[data-tooltip]/> call createTooltip(withTooltip, @data-tooltip of withTooltip) end
+on typeComplete call Reveal.layout()
+">
+    <div class="slides"
+         _="on slideShow for typed in <*[data-typed]/> in target call type(typed, @data-typed of typed) end">
+        <section>
+            <h4>Welcome to your quest</h4>
+            <h1>Adventurous Artifact Conqueror</h1>
+        </section>
+        <section>
+            <h4>You will be accompanied by your fearless companion</h4>
+            <h2>Feathers McGraw 🦜</h2>
+            <small>Feel free to reach out to him for help without hesitation, as he is eager to provide guidance
+                throughout the journey.</small>
+        </section>
+        <section>
+            <section>
+                <h2 class="r-fit-text">Chapter 1</h2>
+                <h2 class="r-fit-text" data-tooltip="Arbeiten mit Django-Models">
+                    Unleash the power of thy Django models
+                </h2>
+            </section>
+            <section>
+                <p data-tooltip="In deinem Projekt existiert bereits eine App 'pirateDatabase'. Registriere die App in deiner 'settings.py' und verwende sie für die nachfolgenden Aufgaben.">
+                    Ahoy, matey! In the vast expanse of your project, a legendary app known as 'pirateDatabase' has
+                    already set sail. Navigate the treacherous waters of 'settings.py' and ensure the app is duly
+                    registered, ready to be harnessed for our forthcoming adventures. Together, we shall
+                    delve into the depths of the 'pirateDatabase' and unravel its secrets in our quest for knowledge and
+                    plunder!
+                </p>
+            </section>
+            <section>
+                <h4>Quest 1.1</h4>
+                <small data-tooltip="Das Model 'Pirate' enthält ein Feld 'age_at_death' - dessen Wert lässt sich aus zwei anderen Feldern herleiten.">
+                    Ah, the 'Pirate' Model, a treasure trove of information! Within its mystical confines lies a hidden
+                    gem known as 'age_at_death.' This precious attribute can be derived from the essence of two other
+                    fields, blending their powers to reveal the age of the pirate at the time of their ultimate voyage
+                    into the great beyond.
+                </small>
+                <small data-tooltip="Es gibt auch einen Test 'test_age_at_death_calculated_automatically' der aktuell fehlschlägt, weil das Feld nicht wie erwartet funktioniert. Fixe diesen Bug!">
+                    A test named 'test_age_at_death_calculated_automatically' awaits our attention, its purpose to
+                    ensure the flawless functioning of the 'age_at_death' field. Alas, it currently meets an unfortunate
+                    fate, plagued by failure. I embark you upon a quest to rectify this bug, restoring
+                    balance to the realm of tests.
+                </small>
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Sail forth, matey! 🦜
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Du kannst beliebige Methoden in deinen Models überschreiben. Eine davon ist die 'save'-Methode.
+                        Diese wir bei jedem Speichervorgang aufgerufen. Ein guter Platz also, um die Berechnung des
+                        Alters zu implementieren.
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4>Quest 1.2</h4>
+                <small data-tooltip="Die Datenbank ist bisher noch leer und soll für Testing-Zwecke mit einer bestehenden 'fixture' befüllt werden. In einem Test soll geprüft werden, ob das age_of_death nach Ändern des Sterbe- oder Geburtsdatums korrekt neu berechnet wird.">
+                    On the high seas, many esteemed pirate mates have met their fate in thrilling adventures. But
+                    our Pirate's database be as empty as a deserted island. It's time to fill the database with the most
+                    famous
+                    pirates who ever sailed the seas. We shall fill the database up with an existing 'piratesFixture'.
+                    After that, we shall verify if the 'age_of_death' be correctly recalculated when the date of birth
+                    or
+                    date of death be modified using the trusty interactive interpreter of python.
+                </small>
+                <small data-tooltip="Ergänze Piraten in der Datenbank und lass dein eigenes fixture von Django direkt aus der Datenbank erstellen">
+                    Though, the database be far from complete. We shall add a few more famous pirates to the database
+                    and
+                    create a new fixture file directly from the depths of Django's database.. Fair winds and aye to this
+                    quest!
+                </small>
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Sail forth, matey! 🦜
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Das bestehende fixture findest du im Ordner 'fixtures'. Ansonsten ist 'manage.py' auch immer
+                        eine gute Anlaufstelle bei Verwaltungsaufgaben.
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4>Quest 1.3</h4>
+                <small data-tooltip="Ein neues Model 'PirateCrew' mit Attributen (z.B. Name) und einer Beziehung zu 'Pirate' soll erstellt werden. Zudem braucht es eine Validierung beim Hinzufügen von Piraten zu einer Crew - nicht mehr als 5 Piraten in einer Crew!">
+                    What be a pirate without his crew! We shall create a blood bond between the pirates through a new
+                    model called 'PirateCrew' and and establish a relationship with the 'Pirate' model. Add some pirates
+                    to those crews!
+                    But beware, matey: a crew with more than five pirates be a recipe for riots and mutiny. It's
+                    something ye better prevent (by validation)!
+                </small>
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Sail forth, matey! 🦜
+                    </button>
+                    <div class="hidden max-w-lg">
+                        <a
+                                href="https://docs.djangoproject.com/en/4.2/ref/models/instances/#validating-objects"
+                                target="_blank">Validiating objects</a>
+                        Vergiss nicht deine Validation mit einem Test zu überprüfen.
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2 class="r-fit-text">Chapter 2</h2>
+                <h2 class="r-fit-text" data-tooltip="Die Macht der Query-Language">
+                    Behold the formidable might of the Query-Language
+                </h2>
+            </section>
+            <section>
+                <p data-tooltip="">
+                    Ready to dock at the next port on our adventure, matey? We be explorin' the power of the query
+                    language, delvin' into complex queries, aggregations and annotations.
+                </p>
+            </section>
+            <section>
+                <h4>Quest 2.1</h4>
+                <small data-tooltip="Erstelle eine einfache View in der App und zeige die jeweiligen Informationen in einer Tabelle an. Schreibe dafür jeweils eine Query.">
+                    Aye, we be scribin' complex queries! Therefore, we shall create a simple view in our app, where we
+                    shall proudly display the pirate's
+                    information in a table. Fear not, this quest is not as slippery as a ships' deck!
+
+                    Create a table with all pirates that ...
+                    <ul>
+                        <li>... have not joined a crew yet.</li>
+                        <li>... are part of a crew whose name contains the mighty symbol of "⚔️"</li>
+                        <li>... are part of a crew where only pirates who've reached the ripe age of 30 or more be
+                            present.
+                        </li>
+                    </ul>
+                </small>
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Push ahead, fearless mate! 🦜
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Schau dir mal die mächtige Query-Language von Django an. Du könntest zum Beispiel 'filter()'
+                        verwenden, um diesen Quest zu lösen.
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4>Quest 2.2</h4>
+                <small data-tooltip="Erstelle auch hier eine einfache View und zeige die jeweiligen Informationen an.">
+                    Aye, it be gettin' even more adventurous! We shall create a view to showcase the desired
+                    information in all its glory. May the winds of coding be favorable and guide us to success.
+
+                    <ul>
+                        <li>Calculate and display the average age of all the pirates.</li>
+                        <li>Show the length of the name for each and every pirate.</li>
+                        <li>Show the count of pirates for each and every crew.</li>
+                    </ul>
+                </small>
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Push ahead, fearless mate! 🦜
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Schau dir mal die mächtige Query-Language von Django an. Für diesen Quest könnten möglicherweise
+                        aggregations und annotations hilfreich sein.
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2 class="r-fit-text">Chapter 3</h2>
+                <h2 class="r-fit-text" data-tooltip="Permissions & Access">
+                    Unlocking the doors of privilege, or unleashing the tempest of chaos
+                </h2>
+            </section>
+            <section>
+                <p data-tooltip="Als nächstes sind Berechtigungen an der Reihe">
+                    Avast, me matey! Now we shall navigate on some administrative waters to ensure security and order
+                    aboard our ship.
+                    Let us attend to these duties with diligence and dedication, for the safety of our crew.
+                    Prepare the ship for the adventure that lies ahead!
+                </p>
+            </section>
+            <section>
+                <h4>Quest 3.1</h4>
+                <small>
+                    Ensuring that only trusted individuals have access to the inner workings of our
+                    pirate community there are several tasks to be done:
+                    <ul>
+                        <li>Non-logged-in users must not be able to view any information about pirates.</li>
+                        <li>Views are restricted only to users who possess a new right called 'filter_pirates'.</li>
+                        <li>Creates a new group that also possesses this right, and add users to this group.</li>
+                    </ul>
+                </small>
+                <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                        Keep going, brave adventurer! 🦜
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Vielleicht hilft das weiter: <a target="_blank"
+                                                        href=" https://docs.djangoproject.com/en/4.2/topics/auth/default/">'django
+                        authentication system'</a>.
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2 class="r-fit-text">Hey, adventurer</h2>
+                <h2 class="r-fit-text" data-tooltip="Dein großes Abenteuer auf See ist zu Ende">
+                    Ye have navigated the high seas of this adventure with skill and courage, just like a mighty pirate.
+                    Ye have emerged victorious and now your journey has come to a triumphant end.
+                </h2>
+            </section>
+            <section>
+                <p>⭐</p>
+                <p data-tooltip="Brich auf zu neuen Abenteuern auf einem höheren Schwierigkeitsgrad. Viel Erfolg!">
+                    <span data-typed="Well done, matey! Ye’ve proven yer worth on the high seas. See youon our next swashbucklin' adventure!!"></span>
+                </p>
+                <p>⭐</p>
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="dist/typed.js"></script>
+<script src="dist/hyperscript.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script src="dist/helper.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
+</html>

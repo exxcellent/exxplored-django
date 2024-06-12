@@ -1,0 +1,38 @@
+<h2>{{ object.name }}</h2>
+<hr/>
+<div>
+    <div class="row">
+        <div class="col-md-4"><strong>🐤 Born on:</strong></div>
+        <div class="col">{{ object.born_on }}</div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-4"><strong>💀 Died on:</strong></div>
+        <div class="col">{{ object.died_on }}</div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-4"><strong>Age at death:</strong></div>
+        <div class="col">{{ object.age_at_death }}</div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-4"><strong>Cause of death:</strong></div>
+        <div class="col">{{ object.cause_of_death }}</div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-4"><strong>Nationality:</strong></div>
+        <div class="col">{{ object.nationality }}</div>
+    </div>
+</div>
+<hr/>
+<div>
+    <h4>📚 Notes</h4>
+    <div id="pirate-notes-content">
+        {% include 'htmx-trial/components/pirate_notes.html' with objects=object.notes.all %}
+    </div>
+    <form class="mt-2">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text" class="form-control" id="id_content" name="content" placeholder="Input your note"/>
+        </div>
+        <button class="btn btn-primary" type="submit">Add note</button>
+    </form>
+</div>

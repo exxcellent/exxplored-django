@@ -1,0 +1,206 @@
+[
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 1,
+    "fields": {
+      "name": "Captain Blunderbeard",
+      "born_on": "1690-04-24",
+      "died_on": "1745-02-12",
+      "age_at_death": 54,
+      "cause_of_death": "Hanging",
+      "nationality": "Scottish"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 2,
+    "fields": {
+      "name": "Madam Rumrunner",
+      "born_on": "1675-12-03",
+      "died_on": "1703-07-21",
+      "age_at_death": 27,
+      "cause_of_death": "Beheading",
+      "nationality": "Jamaican"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 3,
+    "fields": {
+      "name": "Scurvy Pete",
+      "born_on": "1703-04-04",
+      "died_on": "1768-10-15",
+      "age_at_death": 65,
+      "cause_of_death": "Disease",
+      "nationality": "Dutch"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 4,
+    "fields": {
+      "name": "One-Eyed Molly",
+      "born_on": "1688-09-09",
+      "died_on": "1730-10-10",
+      "age_at_death": 42,
+      "cause_of_death": "Unknown",
+      "nationality": "Spanish"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 3,
+    "fields": {
+      "name": "Barnacle Bill",
+      "born_on": "1688-11-01",
+      "died_on": "1735-05-12",
+      "age_at_death": 47,
+      "cause_of_death": "Unknown",
+      "nationality": "Dutch"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 4,
+    "fields": {
+      "name": "Pegleg Polly",
+      "born_on": "1704-07-19",
+      "died_on": "1747-02-05",
+      "age_at_death": 42,
+      "cause_of_death": "Disease",
+      "nationality": "English"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 5,
+    "fields": {
+      "name": "Crazybeard",
+      "born_on": "1699-05-07",
+      "died_on": "1736-11-21",
+      "age_at_death": 37,
+      "cause_of_death": "Combat",
+      "nationality": "Spanish"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 6,
+    "fields": {
+      "name": "Rumbeard",
+      "born_on": "1682-12-24",
+      "died_on": "1723-08-08",
+      "age_at_death": 40,
+      "cause_of_death": "Hanging",
+      "nationality": "Irish"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 7,
+    "fields": {
+      "name": "Long John Stubbles",
+      "born_on": "1675-09-10",
+      "died_on": "1717-03-02",
+      "age_at_death": 41,
+      "cause_of_death": "Combat",
+      "nationality": "English"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 8,
+    "fields": {
+      "name": "Blackbeard's Ghost",
+      "born_on": "1666-04-03",
+      "died_on": "1720-12-15",
+      "age_at_death": 54,
+      "cause_of_death": "Beheading",
+      "nationality": "Unknown"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 9,
+    "fields": {
+      "name": "Salty Sally",
+      "born_on": "1693-06-29",
+      "died_on": "1727-02-17",
+      "age_at_death": 33,
+      "cause_of_death": "Beheading",
+      "nationality": "French"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 10,
+    "fields": {
+      "name": "Black Jack Sparrow",
+      "born_on": "1698-10-16",
+      "died_on": "1737-07-06",
+      "age_at_death": 39,
+      "cause_of_death": "Unknown",
+      "nationality": "English"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 11,
+    "fields": {
+      "name": "Jolly Roger",
+      "born_on": "1670-02-11",
+      "died_on": "1711-09-25",
+      "age_at_death": 41,
+      "cause_of_death": "Unknown",
+      "nationality": "Unknown"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 12,
+    "fields": {
+      "name": "Calico Kate",
+      "born_on": "1689-07-03",
+      "died_on": "1726-12-29",
+      "age_at_death": 37,
+      "cause_of_death": "Combat",
+      "nationality": "Irish"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 13,
+    "fields": {
+      "name": "One-Eyed Morgan",
+      "born_on": "1677-03-17",
+      "died_on": "1734-08-07",
+      "age_at_death": 57,
+      "cause_of_death": "Combat",
+      "nationality": "Scottish"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 14,
+    "fields": {
+      "name": "Scurvy Sam",
+      "born_on": "1700-11-22",
+      "died_on": "1718-03-09",
+      "age_at_death": 17,
+      "cause_of_death": "Hanging",
+      "nationality": "English"
+    }
+  },
+  {
+    "model": "pirateDatabase.Pirate",
+    "pk": 15,
+    "fields": {
+      "name": "Wicked Wilma",
+      "born_on": "1680-09-05",
+      "died_on": "1723-04-18",
+      "age_at_death": 43,
+      "cause_of_death": "Beheading",
+      "nationality": "Dutch"
+    }
+  }
+]

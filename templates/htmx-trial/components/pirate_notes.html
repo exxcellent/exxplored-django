@@ -1,0 +1,23 @@
+{% if not objects %}
+    <em>There are no notes currently</em>
+{% else %}
+    <table class="table table-borderless">
+        {% for note in objects %}
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <div class="flex-grow-1">
+                            {{ note.content }}
+                        </div>
+                        <div>
+                            <button type="button"
+                                    class="btn">
+                                🗑️
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endif %}

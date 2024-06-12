@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>eXXplore the unknown | student edition | Django</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/moon.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="reveal" _="
+init for withTooltip in <*[data-tooltip]/> call createTooltip(withTooltip, @data-tooltip of withTooltip) end
+on typeComplete call Reveal.layout()
+">
+    <div class="slides" _="on slideShow for typed in <*[data-typed]/> in target call type(typed, @data-typed of typed) end">
+        <section>
+            <img src="img/intro.jpg">
+        </section>
+        <section>
+            <img src="img/Django1.jpg">
+        </section>
+        <section>
+            <p>
+                <span data-typed="Wähle deinen gefährlichen Pfad, mutiger Abenteurer, und lass das Schicksal die schwierige Reise enthüllen:"
+                      data-tooltip="Wähle deinen Erfahrungsgrad"></span>
+            </p>
+            <div class="flex flex-col gap-4">
+                <a class="cursor-pointer" href="intro.html" target="_blank">
+                    <div class="r-frame">
+                        <h4>Novice Explorer</h4>
+                    </div>
+                </a>
+                <a class="cursor-pointer" href="intermediate.html" target="_blank">
+                    <h4 class="r-frame" data-tooltip="Fortgeschritten">Adventurous Artifact Conqueror</h4>
+                </a>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="dist/typed.js"></script>
+<script src="dist/hyperscript.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script src="dist/helper.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
+</html>
