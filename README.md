@@ -1,3 +1,3 @@
 eXXplore Django - student edition
 
-Open docs/slides/index.html in a browser to start the adventure!
+Open docs/index.html in a browser to start the adventure!
