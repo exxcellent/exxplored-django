@@ -25,7 +25,7 @@ on typeComplete call Reveal.layout()
             <h1>Novice Explorer</h1>
         </section>
         <section>
-            <h4>Du wirst von deinem treuen Gefährten begleitet.</h4>
+            <h4>Du wirst von deinem treuen Gefährten begleitet:</h4>
             <h2>Scallywag the Sea Turtle 🐢</h2>
             <small>Zögere nicht, seine Hilfe zu suchen.</small>
         </section>
@@ -48,7 +48,7 @@ on typeComplete call Reveal.layout()
             <section data-auto-animate>
                 <h2>Was ist Django?</h2>
                 <ul>
-                    <li class="fragment">Fullstack-Framework: es ist alles enthalten um eine Webanwendung zu entwickeln <i class="fas fa-atom"></i></li>
+                    <li class="fragment">Fullstack-Framework: enthält alles, um eine Webanwendung zu entwickeln</i></li>
                     <li class="fragment">
                         D<span class="fragment" style="font-size:0.5em">on't</span>
                         R<span class="fragment" style="font-size:0.5em">epeat</span>
@@ -58,18 +58,6 @@ on typeComplete call Reveal.layout()
                         Client-Server Architektur <span style="font-size:0.5em">(Request-Response-Schema)</span>
                     </li>
                 </ul>
-                <aside class="notes">
-                    <ul>
-                        <li>
-                            Fullstack -> alles enthalten um eine Webanwendung zu entwickeln (auch wenn man nicht alles
-                            verwenden muss!)
-                        </li>
-                        <li>
-                            Lässt sich nicht in ein Schema wie MVC etc. pressen, da nicht pedantisch → Praktikabilität
-                            zählt
-                        </li>
-                    </ul>
-                </aside>
             </section>
             <section>
                 <h2>ARCHITEKTUR</h2>
@@ -81,9 +69,7 @@ on typeComplete call Reveal.layout()
                         <li>MODEL: Arbeit mit Daten und Datenbanken</li>
                         <li>TEMPLATE: Ausgabekomponente, die mithilfe eines Kontextes gefüllt werden</li>
                         <li>
-                            FRAMEWORK: behandelt Kommunikation zwischen Benutzer + Datenbank und nimmt einem so viel der
-                            Arbeit ab, wie möglich
-                        </li>
+                            FRAMEWORK: behandelt Kommunikation zwischen Benutzer und Datenbank und so viel Arbeit wie möglich ab                       </li>
                 </ul>
             </section>
             <section>
@@ -198,22 +184,32 @@ PROJEKT_ROOT
                         <li class="fragment">Anschließend in INSTALLED_APPS innerhalb der "settings.py" eintragen</li>
 
                     </ul>
+
+                    <div class="flex flex-col items-end text-base w-full">
+                    <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
+                         Du schaffst das! 🐢
+                    </button>
+                    <div class="hidden max-w-lg">
+                        Du kannst beliebige Methoden in deinen Models überschreiben. Eine davon ist die 'save'-Methode.
+                        Diese wir bei jedem Speichervorgang aufgerufen. Ein guter Platz also, um die Berechnung des
+                        Alters zu implementieren.
+                    </div>
+                </div>
+
                     <div class="flex flex-col items-end text-base w-full">
                         <button _="on click toggle .hidden on next <div/>" data-tooltip="Hilfe">
                             Du schaffst das! 🐢
                         </button>
                         <div class="hidden max-w-lg">
                             Django erscheint vollständig ausgestattet mit all dem Equipment, das du brauchst. Ein treuer
-                            Begleiter dabei ist 'django-admin'. Du kannst ihn in deinem Projekt beschwören, indem du
-                            Folgendes aufrufst:</a>.
+                            Begleiter dabei ist 'django-admin'.</a>.
                         </div>
                     </div>
                     <aside class="notes">
                         <ul>
                             <li>
                                 Apps sind logische Einheiten, die (theoretisch) zwischen verschiedenen Projekten
-                                austauschbar
-                                sein sollen
+                                austauschbar sein sollen
                             </li>
                             <li>
                                 Ein Projekt kann mehrere Apps beinhalten und eine App kann in verschiedenen Projekten
@@ -230,11 +226,8 @@ PROJEKT_ROOT
                             </li>
                             <li>
                                 Damit das Projekt die App auch verwenden kann, muss man sie in die INSTALLED_APPS
-                                innerhalb
-                                der "eXXploreDjango/settings.py" Datei eintragen. Da sind auch schon eine handvoll
-                                anderer
-                                Apps enthalten,
-                                die Django schon mitliefert
+                                innerhalb der "eXXploreDjango/settings.py" Datei eintragen. Da sind auch schon eine handvoll
+                                anderer Apps enthalten, die Django schon mitliefert
                             </li>
                         </ul>
                     </aside>
@@ -246,39 +239,23 @@ PROJEKT_ROOT
                 <h2 class="r-fit-text">Django Views</h2>
             </section>
             <section data-auto-animate>
-                <h2>Der erste View</h2>
+                <h2>Die erste View</h2>
                 <blockquote>
-                    &bdquo;Views sind Python-Methoden, die einen Request entgegen nehmen und mit einem Response
+                    &bdquo;Views sind Python-Methoden, die einen Request entgegen nehmen und mit einer Response
                     antworten&ldquo;
                     <span style="font-size: 0.2em; white-space: nowrap">Zitat: Die Tutoren (heute)</span>
                 </blockquote>
-                <aside class="notes">
-                    <p>Zentral: ZITAT!</p>
-                </aside>
             </section>
             <section data-auto-animate>
                 <h2>Der erste View</h2>
                 <ul>
-                    <li class="fragment">View werden über eine/mehrere Path(s) angesprochen</li>
+                    <li class="fragment">Views werden über einen/mehrere Path(s) angesprochen</li>
                     <li class="fragment">Dispatcher weiß dadurch, ob und was er im Fall eines Requests an eine URL tun soll</li>
                     <li class="fragment">
                             Dispatcher ruft die Methode mit dem aktuellen Request und etwaigen Parametern auf
                         </li>
                     <li class="fragment">Alle URLs (Endpoints) werden in einer zentralen Datei ("urls.py") gepflegt und sind projektweit gültig </li>
                 </ul>
-                <aside class="notes">
-                    <ul>
-                        <li>Views werden einer/mehrerer Paths zugeordnet</li>
-                        <li>dadurch weiß der Dispatcher ob und was er im Fall eines Requests an eine URL tun soll</li>
-                        <li>
-                            Dispatcher ruft dann die Methode mit dem aktuellen Request (alle Infos zum Aufruf) und
-                            etwaigen
-                            Parametern (können über den Path definiert werden) auf
-                        </li>
-                        <li>Alle URLs (Endpoints) werden in einer zentralen Datei gepflegt und sind projektweit gültig
-                        </li>
-                    </ul>
-                </aside>
             </section>
             <section>
                 <h2>Beispiel</h2>
@@ -290,7 +267,7 @@ PROJEKT_ROOT
     from . import views
 
     urlpatterns = [
-    path('today/', views.current_datetime),
+        path('today/', views.current_datetime),
     ]
                 </script></code></pre>
                 <pre class="fragment"><code data-trim class="language-python" data-line-numbers="2-3|5|6-8|8">
@@ -381,13 +358,11 @@ PROJEKT_ROOT
                     </button>
                     </button>
                     <div class="hidden max-w-lg">
-                        Für diese Aufgabe reicht es, einfaches HTML zurückgeben zu lassen z.B. "&lt;html&gt; &lt;body&gt;...&lt;/html&gt;".format(...)
                         <p x-show="show">
                             Dein Formular im HTML setzt normalerweise ein POST-Request ab. Die Daten daraus kannst
                             du aus dem
                             <a href="https://docs.djangoproject.com/en/3.2/ref/request-response/#module-django.http"
-                               target="_blank">request-Parameter</a>
-                            deines Views auslesen.
+                               target="_blank">request-Parameter</a> auslesen.
                         </p>
                     </div>
                 </div>
@@ -778,7 +753,7 @@ admin.site.register(Book, BookAdmin)
         <section>
             <section data-auto-animate data-background-transition="zoom">
                 <h2 class="r-fit-text">Chapter 6</h2>
-                <h2 class="r-fit-text">Forms</h2>
+                <h2 class="r-fit-text">Django Forms</h2>
             </section>
 
             <section>
@@ -820,7 +795,7 @@ admin.site.register(Book, BookAdmin)
 from django import forms
 
 class NameForm(forms.Form):
-your_name = forms.CharField(label='Your name', max_length=100)
+    your_name = forms.CharField(label='Your name', max_length=100)
 </script>
             </code></pre>
                 <aside class="notes">
@@ -837,16 +812,16 @@ your_name = forms.CharField(label='Your name', max_length=100)
                 <pre class="fragment"><code data-trim class="language-python">
 <script type="text/template">
 class Person(models.Model):
-name = models.CharField(max_length=100)
-birth_date = models.DateField(blank=True, null=True)
+    name = models.CharField(max_length=100)
+    birth_date = models.DateField(blank=True, null=True)
 </script>
             </code></pre>
                 <pre class="fragment"><code data-trim class="language-python">
 <script type="text/template">
 class PersonForm(ModelForm):
 class Meta:
-model = Person
-exclude = []
+    model = Person
+    exclude = []
 </script>
             </code></pre>
                 <aside class="notes">
@@ -907,9 +882,9 @@ exclude = []
 from django.http import HttpResponse
 
 def my_view(request):
-if request.method == 'GET':
-# view logic
-return HttpResponse('result')
+    if request.method == 'GET':
+    # view logic
+    return HttpResponse('result')
 </script>
             </code></pre>
                 <pre class="fragment"><code data-trim class="language-python">
@@ -918,9 +893,9 @@ from django.http import HttpResponse
 from django.views import View
 
 class MyView(View):
-def get(self, request):
-# view logic
-return HttpResponse('result')
+    def get(self, request):
+    # view logic
+    return HttpResponse('result')
 </script>
             </code></pre>
             </section>
@@ -955,10 +930,10 @@ return HttpResponse('result')
 <script type="text/template">
 class BaseDetailView(SingleObjectMixin, View):
 """A base view for displaying a single object."""
-def get(self, request, *args, **kwargs):
-self.object = self.get_object()
-context = self.get_context_data(object=self.object)
-return self.render_to_response(context)
+    def get(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        context = self.get_context_data(object=self.object)
+        return self.render_to_response(context)
 </script>
             </code></pre>
                 <pre class="fragment"><code data-trim class="language-python">
@@ -967,9 +942,9 @@ class SingleObjectMixin(ContextMixin):
 """
 Provide the ability to retrieve a single object for further manipulation.
 """
-def get_object(self, queryset=None):
-# implementation for getting the object based on an id given in e.g. the URL
-# [...]
+    def get_object(self, queryset=None):
+    # implementation for getting the object based on an id given in e.g. the URL
+    # [...]
 </script>
             </code></pre>
             </section>
@@ -991,7 +966,7 @@ def get_object(self, queryset=None):
                         Weiter so! 🐢
                     </button>
                     <div class="hidden max-w-lg">
-                                <a href="https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-display/#listview"
+                                Schau mal hier: <a href="https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-display/#listview"
                                    target="_blank">ListView</a>
 
                     </div>
